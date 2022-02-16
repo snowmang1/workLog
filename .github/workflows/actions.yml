@@ -1,0 +1,24 @@
+name: work_log CI
+
+on:
+  push:
+    branches: [ trunk ]
+  pull_request:
+    branches: [ trunk ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: update unbuntu
+        run: sudo apt update -y && sudo apt upgrade -y
+      - name: install deps
+        run: sudo apt install curl build-essential gcc make -y
+      - name: install rustup
+        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      - name: cargo
+        run: sudo install cargo
+      - name: test
+        run: cargo build
+
