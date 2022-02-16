@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: update unbuntu
-        run: sudo apt update -y && sudo apt upgrade -y
+        run: sudo apt update -y
       - name: install deps
         run: sudo apt install curl build-essential gcc make -y
       - name: install rustup
