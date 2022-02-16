@@ -16,7 +16,7 @@ jobs:
       - name: install deps
         run: sudo apt install curl build-essential gcc make -y
       - name: install rustup
-        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        run: curl --proto '=https' --tlsv1.2 -sSf -y https://sh.rustup.rs | sh
       - name: cargo
         run: sudo install cargo
       - name: test
