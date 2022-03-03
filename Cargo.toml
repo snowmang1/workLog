@@ -5,10 +5,4 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-# version 0.3.0
-## + add past time to log
-## + optional per login/logout notes
-### these would be an archive of text files attached to a specific login/logout time
-## + pretty output for times
-
 [dependencies]
